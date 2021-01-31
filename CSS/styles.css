@@ -798,3 +798,34 @@ a {
   margin: 0 auto;
   max-width: 500px;
 }
+
+/* Feature Block */
+.feature {
+  gap: 4rem 6rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .feature {
+    grid-template: 1fr / repeat(2, 1fr);
+  }
+}
