@@ -1,6 +1,7 @@
 const collapsibles = document.querySelectorAll(".collapsible");
 collapsibles.forEach((item) =>
   item.addEventListener("click", function () {
-    this.classList.toggle("collapsible--expanded");
+    collapsibles.forEach(elm => { if (elm != this) elm.classList.toggle("collapsible--expanded", false) });
+    setTimeout(() => { this.classList.toggle("collapsible--expanded") }, 250);
   })
 );
